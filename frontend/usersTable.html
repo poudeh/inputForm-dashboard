@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Modals.css">
+    <link rel="stylesheet" href="./css/Table.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sticky Table Headers by <code>position: sticky;</code></h1>
+<p>Trying out to make a sweet table with sticky table headers if their table is in the viewport. (Like the iOS names list names beginning capital letter)</p>
+<p class="warning">Supported by Firefox and Safari [<a href="http://caniuse.com/#feat=css-sticky" target="_blank">caniuse.com#sticky</a>]</p>
+<main class="st_viewport">
+  <div class="st_wrap_table" data-table_id="0">
+    <header class="st_table_header">
+      <h2>Table header one</h2>
+      <div class="st_row">
+        <div class="st_column _rank">id</div>
+        <div class="st_column _name">firstname</div>
+        <div class="st_column _surname">lastname</div>
+        <div class="st_column _year">username</div>
+        <div class="st_column _section">email</div>
+      </div>
+    </header>
+    <div class="st_table">
+      <div class="st_row">
+        <div class="st_column _rank">0</div>
+        <div class="st_column _name">John</div>
+        <div class="st_column _surname">Doe</div>
+        <div class="st_column _year">John-doe</div>
+        <div class="st_column _section">Kiarash.poudeh@yahoo.com</div>
+        <div class="btn__wrapper">
+            <button class="delete__btn" role="button" >Delete</button>
+            <button id="editBtn" class="delete__btn edit__btn">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!--Delete modal-->
+  <!-- modal 2 -->
+ <!--!Add display flex to box to show it.-->
+    <div id="deleteModal" class="box">
+          <div class="modal-container" id="m2-o" style="--m-background: hsla(0, 0%, 0%, .4);">
+            <div class="modal">
+              <h1 class="modal__title">Deleting user!</h1>
+              <p class="modal__text">Are you sure that you want to delete the user?</p>
+              <button id="confirm-delete__btn" class="modal__btn">Yes &rarr;</button>
+              <button class="modal__btn">No &rarr;</button>
+              <a id="exitDeleteModal" href="#m2-c" class="link-2"></a>
+            </div>
+          </div>
+        </div>
+<!-- /modal 2 -->
+<!--Edit Modal-->
+<div id="edit-modal" class="box">
+    <div class="modal-container" id="m2-o" style="--m-background: hsla(0, 0%, 0%, .4);">
+        <div class="modal">
+            <h1 class="modal__title">Editing Users!</h1>
+            <label for="firstname">firstname</label>
+            <input id="firstname" type="text" placeholder=" at least 5 characters" />
+            <label for="lastname">lastname</label>
+            <input id="lastname" type="text" placeholder=" at least 5 characters" />
+            <label>username</label>
+            <input id="username" type="text" placeholder="at least 3 characters" />
+            <label>email</label>
+            <input id="email" type="email" placeholder="example@example.com" />
+            <button id="edit-user--btn" class="button-26" >edit-User</button>
+            <a id="exitEditModal" href="#m2-c" class="link-2"></a>
+        </div>
+    </div>
+</div>
+
+<script src="./scripts/table.js"></script>
+</body>
+</html>
